@@ -1,5 +1,5 @@
 class Bike:
-  def __init__(ID: int, Is_electric: bool, station_ID, client_ID=None: int):
+  def __init__(ID: int, Is_electric: bool, station_ID, client_ID=None):
     self.ID = ID
     self.Is_electric = Is_electric
     self.client_ID = client_ID
