@@ -10,6 +10,7 @@ class Bike:
   def start_ride(time):
     self.station_ID = None
     self.time_started = time
+    
   #Метод початку поїздки 
 
   def end_ride(time, station_ID):
@@ -25,17 +26,25 @@ class Bike:
       #видає статистику у вигляді списку
 
   class Station:
-    def __init__:
+    def __init__(ID, Available_bikes=[]):
+      self.ID = ID
+      self.Available_bikes = Available_bikes
     #атрибути станції(Наявні велосипеди, свій номер/назву)
 
     def get_available_bikes():
+      return self.Available_bikes
     #Отримати список з наявними велосипедами
       
-    def take_bike():
+    def take_bike(Bike_ID: int):
+      bike = self.Available_bikes.pop(Bike_ID)
+      return f"{Bike_ID} взяло зі станції {self.ID}"
     #Забрати велосипед зі станції
 
-    def return_bike():
+    def return_bike(Bike_ID: int):
+      bike = self.Available_bikes.append(Bike_ID)
+      return f"{Bike_ID} залишено на станції {self.ID}"
     #поставити велосипед зі станції
 
     def station_statistic():
+      return [self.station_ID, self.Available_bikes]
       #видає статистику у вигляді списку
